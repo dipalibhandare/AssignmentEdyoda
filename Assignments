@@ -1,0 +1,37 @@
+Assignment 4:
+  Steps:
+    1.firstly root by sudo su -
+    2.then have clone the git by command "git clone https://github.com/ashishrpandey/example-voting-app"
+    3.then list out files and folders by ls
+    4.change directory to example-voting-app by "cd example-voting-app/"
+    5. again ls
+    6.now changed to k8s-specifications with the command "cd k8s-specifications/"
+    7.now to update resource used the command "kubectl apply -f."
+      It was throwing some error, so changed nodeport from 31001 to 31002 with the command "vi result-service.yaml"
+      and from 31000 to 31003 "vi vote-service.yaml"
+    8.now copied the master IP address and pasted it in browser :in one tab "http://13.229.218.156:31002/" and in another tab "http://13.229.218.156:31003/"
+    9.observed the votes
+    10.by mistake I have deleted db pod first then worker pod and at last voting pod 
+    11. now it is not showing the result in the voting app
+    12.result pod also deleted and showing number of votes as app gets restarted 
+    
+    
+    
+    pasting steps in putty:
+    
+    [ec2-user@ip-172-31-25-210 ~]$ sudo su -
+    [root@ip-172-31-25-210 ~]#  git clone https://github.com/ashishrpandey/examploting-app
+    [root@ip-172-31-25-210 ~]# ls
+    [root@ip-172-31-25-210 k8s-specifications]# kubectl apply -f.
+    [root@ip-172-31-25-210 k8s-specifications]# kubectl get po
+    [root@ip-172-31-25-210 k8s-specifications]# kubectl delete pod db-b54cd94f4-rx7pt
+pod "db-b54cd94f4-rx7pt" deleted
+    [root@ip-172-31-25-210 k8s-specifications]# kubectl delete pod worker-dd46d7584-xghbt
+pod "worker-dd46d7584-xghbt" deleted
+    [root@ip-172-31-25-210 k8s-specifications]# kubectl delete pod vote-94849dc97-84k5t
+pod "vote-94849dc97-84k5t" deleted
+    [root@ip-172-31-25-210 k8s-specifications]# kubectl delete pod result-5d57b59
+pod "result-5d57b59f4b-zh5cm" deleted
+
+    
+    
