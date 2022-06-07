@@ -1,0 +1,1 @@
+We should use daemonSet instead of replicaSet for single copy of pod, so that pods can be garbage collected when we delete daemonSet.
