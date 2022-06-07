@@ -1,19 +1,13 @@
 Assignment 4:
   Steps:
-    1.firstly root by sudo su -
-    2.then have clone the git by command "git clone https://github.com/ashishrpandey/example-voting-app"
-    3.then list out files and folders by ls
-    4.change directory to example-voting-app by "cd example-voting-app/"
-    5. again ls
-    6.now changed to k8s-specifications with the command "cd k8s-specifications/"
-    7.now to update resource used the command "kubectl apply -f."
+    1.now to update resource used the command "kubectl apply -f."
       It was throwing some error, so changed nodeport from 31001 to 31002 with the command "vi result-service.yaml"
       and from 31000 to 31003 "vi vote-service.yaml"
-    8.now copied the master IP address and pasted it in browser :in one tab "http://13.229.218.156:31002/" and in another tab "http://13.229.218.156:31003/"
-    9.observed the votes
-    10.by mistake I have deleted db pod first then worker pod and at last voting pod 
-    11. now it is not showing the result in the voting app
-    12.result pod also deleted and showing number of votes as app gets restarted 
+    2.now copied the master IP address and pasted it in browser :in one tab "http://13.229.218.156:31002/" and in another tab "http://13.229.218.156:31003/"
+    3.observed the votes
+    4.by mistake I have deleted db pod first then worker pod and at last voting pod 
+    5. now it is not showing the result in the voting app
+    6.result pod also deleted and showing number of votes as app gets restarted 
     
     
     
